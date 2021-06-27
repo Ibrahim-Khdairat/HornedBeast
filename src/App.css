@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.header
+{
+  text-align: center;
+}
+
+.hornedbeasts
+{
+  display:inline-block;
+  width: 450px;
+ margin: 25px;
+  
+}
+
+.hornedbeasts h2
+{
+  text-align: center;
+}
+.hornedbeasts img
+{
+  
+    width: 450px;
+    height: 450px;
+}
+.hornedbeasts p
+{
+  text-align: center;
+}
+
+
+.footer
+{
+  text-align: center;
+  padding: 30px;
+}
