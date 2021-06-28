@@ -1,15 +1,14 @@
 import React from 'react';
 
 class Header extends React.Component{
-    render(){
-        return(
-            <div className="header">
+  render(){
+    return(
+      <div className="header">
                 
-             <h1>Lab-01 : HornedBeasts</h1>
+        <h1>Lab-01 : HornedBeasts</h1>
 
-            </div>
-        )
-    }
+      </div>
+    );
+  }
 }
-
 export default Header;
