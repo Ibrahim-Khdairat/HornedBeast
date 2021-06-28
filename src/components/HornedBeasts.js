@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card'
+// import Card from 'react-bootstrap/Card'
 class HornedBeasts extends React.Component {
 
     constructor(props) {
@@ -21,7 +21,7 @@ class HornedBeasts extends React.Component {
     render() {
         return (
             <div className="hornedbeasts">
-                {/* <h2>
+                <h2>
                     {this.props.title}
                 </h2>
 
@@ -32,9 +32,9 @@ class HornedBeasts extends React.Component {
                 </p>
                 <p>
                 💙 {this.state.numOfHorned}
-                </p> */}
+                </p>
 
-                <Card style={{ width: '18rem' }}>
+                {/* <Card style={{ width: '18rem' }}>
                   
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
@@ -46,7 +46,7 @@ class HornedBeasts extends React.Component {
                         💙 {this.state.numOfHorned}
                         </Card.Text>
                     </Card.Body>
-                </Card>
+                </Card> */}
             </div>
 
         )
