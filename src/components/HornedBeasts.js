@@ -2,14 +2,17 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import SelectedHorned from './SelectedHorned';
+import Horned from './Horned.json';
+
 class HornedBeasts extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             numOfHornedLike: 0,
-            numOfHornedDisLike: 0
-
+            numOfHornedDisLike: 0,
+           
         }
 
 
@@ -25,43 +28,40 @@ class HornedBeasts extends React.Component {
             numOfHornedDisLike: this.state.numOfHornedDisLike + 1
         })
     }
-
+ 
+    renderModal=() =>{
+        this.props.renderModal(this.props.title)
+    }
+    
 
     render() {
+
         return (
+
             <div className="hornedbeasts">
-                {/* <h2>
-                    {this.props.title}
-                </h2>
 
-                <img onClick={this.increaseHorne} src={this.props.url} alt={this.props.alt} />
-                
-                <p>
-                    {this.props.prag}
-                </p>
-                <p>
-                💙 {this.state.numOfHorned}
-                </p> */}
+                <Card  style={{ width: '18rem' }}>
 
-                <Card style={{ width: '18rem' }}>
-                  
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Img  variant="top" src={this.props.url} alt={this.props.title} />
+                        <Card.Img variant="top" src={this.props.url} alt={this.props.title} />
                         <Card.Text>
                             {this.props.prag}
                         </Card.Text>
                         <Card.Text>
-                        Vote For Your Fave. Horne ...
+                            Vote For Your Fave. Horne ...
                         </Card.Text>
                         <Button variant="success" onClick={this.increaseHorneLike}>👍</Button>{' '}
-                        <Button variant="danger" onClick={this.increaseHorneDisLike}>👎</Button> 
+                        <Button variant="danger" onClick={this.increaseHorneDisLike}>👎</Button>
                         <Card.Text>
-                        Num Of Likes : {this.state.numOfHornedLike}
-                        </Card.Text> 
-                        <Card.Text>
-                        Num Of Dis-Likes : {this.state.numOfHornedDisLike}
+                            Num Of Likes : {this.state.numOfHornedLike}
                         </Card.Text>
+                        <Card.Text>
+                            Num Of Dis-Likes : {this.state.numOfHornedDisLike}
+                        </Card.Text>
+                        <Button variant="info" onClick={this.renderModal}>Show Details</Button>
+
+
                     </Card.Body>
                 </Card>
             </div>
@@ -71,3 +71,5 @@ class HornedBeasts extends React.Component {
 }
 
 export default HornedBeasts;
+
+

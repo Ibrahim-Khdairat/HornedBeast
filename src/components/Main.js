@@ -5,14 +5,17 @@ import Horned from './Horned.json';
 class Main extends React.Component {
   
 
-
+constructor(props)
+{
+    super(props)
+}
     render() {
        
         return (
             <div className="main">
                {Horned.map((item,index)=>{
                    return(
-                   <HornedBeasts  title={item.title} prag={item.description} url={item.image_url} key={index} />
+                   <HornedBeasts  renderModal={this.props.renderModal} selectedAnimal={item.title} title={item.title} prag={item.description} url={item.image_url} keyValue={index} key={index} />
                    )
                })}
 
