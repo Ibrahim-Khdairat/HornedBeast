@@ -17,7 +17,7 @@ class SelectedHorned extends React.Component {
 
             <Modal show={this.props.showModal} onHide={this.props.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>{this.props.selectedAnimal.title}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Card.Img variant="top" src={this.props.selectedAnimal.image_url} alt={this.props.title} />
