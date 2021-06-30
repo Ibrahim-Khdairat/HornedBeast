@@ -26,7 +26,7 @@ class App extends React.Component{
 
     this.setState({
         showModal:true,
-        selectedAnimal:selected
+        selectedAnimal : selected
     })
   }
   
@@ -44,7 +44,6 @@ class App extends React.Component{
     return(
       <div>
         <Header/>
-
         <Main renderModal={this.renderModal} selectedAnimal={this.state.selectedAnimal}/>
         <SelectedHorned showModal={this.state.showModal} selectedAnimal={this.state.selectedAnimal} handleClose={this.handleClose} />
         <Footer/>
