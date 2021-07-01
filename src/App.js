@@ -21,8 +21,9 @@ class App extends React.Component{
 
   renderModal = (key) => {
     let selected = Horned.find(animal=>{
-        if(animal.title === key){return animal;}
-    })
+        if(animal.title === key){return animal;} 
+    }
+    )
 
     this.setState({
         showModal:true,
@@ -31,9 +32,6 @@ class App extends React.Component{
   }
   
   handleClose = () => {
-
-    
-
     this.setState({
         showModal:false,
         selectedAnimal:{}
@@ -42,12 +40,12 @@ class App extends React.Component{
   
   render(){
     return(
-      <div>
+      <>
         <Header/>
         <Main renderModal={this.renderModal} selectedAnimal={this.state.selectedAnimal}/>
         <SelectedHorned showModal={this.state.showModal} selectedAnimal={this.state.selectedAnimal} handleClose={this.handleClose} />
         <Footer/>
-      </div>
+      </>
      
     );
   }

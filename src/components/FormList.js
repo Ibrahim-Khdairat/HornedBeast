@@ -1,14 +1,10 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap/'
+import { Form } from 'react-bootstrap/'
 
 
 class FormList extends React.Component {
-    constructor(props) {
-        super(props)
-
-    }
-
    
+  
 
     render() {
         return (

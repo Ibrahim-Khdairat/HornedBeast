@@ -2,13 +2,13 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import SelectedHorned from './SelectedHorned';
-import Horned from './Horned.json';
+
 
 class HornedBeasts extends React.Component {
 
     constructor(props) {
         super(props);
+        
         this.state = {
             numOfHornedLike: 0,
             numOfHornedDisLike: 0,
@@ -40,11 +40,11 @@ class HornedBeasts extends React.Component {
 
             <div className="hornedbeasts">
 
-                <Card  style={{ width: '18rem' }}>
+                <Card  style={{ width: '18rem' , backgroundColor:'lightgrey' , boxShadow:'2px 2px 2px black'} }>
 
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Img variant="top" src={this.props.url} alt={this.props.title} />
+                        <Card.Img style={{  boxShadow:'2px 2px 2px #ccc'} } variant="top" src={this.props.url} alt={this.props.title} />
                         <Card.Text>
                             {this.props.prag}
                         </Card.Text>
