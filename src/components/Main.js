@@ -9,25 +9,27 @@ class Main extends React.Component {
 
     constructor(props) {
         super(props)
+
         this.state = {
             RenderedHorne : Horned,
         }
     }
 
     Filter = (event)=>{
-        let value = event.target.value ;
+        let value = parseInt(event.target.value)  ;
 
         let filteredArray = [];
        
         filteredArray =  Horned.filter( element =>{
-                if(element.horns == value){return true}
+                if(element.horns === value){return true}
+                
             } 
         )
         this.setState({
             RenderedHorne : filteredArray
         })
 
-        if (filteredArray.length == 0){
+        if (filteredArray.length === 0){
             this.setState({
                 RenderedHorne : Horned
               })
