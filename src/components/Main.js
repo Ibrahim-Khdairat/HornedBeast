@@ -11,44 +11,46 @@ class Main extends React.Component {
         super(props)
 
         this.state = {
-            RenderedHorne : Horned,
+            RenderedHorne: Horned,
         }
     }
 
-    Filter = (event)=>{
-        let value = parseInt(event.target.value)  ;
+    Filter = (event) => {
+        let value = parseInt(event.target.value);
 
         let filteredArray = [];
-       
-        filteredArray =  Horned.filter( element =>{
-                if(element.horns === value){return true}
-                
-            } 
+
+        filteredArray = Horned.filter(element => {
+            if (element.horns === value) { return true }
+
+        }
         )
         this.setState({
-            RenderedHorne : filteredArray
+            RenderedHorne: filteredArray
         })
 
-        if (filteredArray.length === 0){
+        if (filteredArray.length === 0) {
             this.setState({
-                RenderedHorne : Horned
-              })
+                RenderedHorne: Horned
+            })
         }
     }
 
-   
+
     render() {
 
         return (
             <div className="main">
 
-                <FormList Filter ={this.Filter}/>
+                <FormList Filter={this.Filter} />
 
                 {this.state.RenderedHorne.map((item, index) => {
                     return (
                         <HornedBeasts renderModal={this.props.renderModal} selectedAnimal={item.title} title={item.title} prag={item.description} url={item.image_url} keyValue={index} key={index} />
                     )
                 })}
+
+             
 
             </div>
 
