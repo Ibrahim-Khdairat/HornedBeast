@@ -4,17 +4,16 @@ import { Form } from 'react-bootstrap/'
 
 class FormList extends React.Component {
    
-  
 
     render() {
         return (
-            <>
+            <div className ="form">
 
-                <Form  >
+                <Form >
 
                     <Form.Label>Filter Based On Number Of Hornes</Form.Label>
 
-                    <Form.Control as='select' onChange = { this.props.Filter}>
+                    <Form.Control as='select' onChange = { this.props.Filter }>
                         <option value="0"> All </option>
                         <option value="1"> One </option>
                         <option value="2"> Two </option>
@@ -23,7 +22,7 @@ class FormList extends React.Component {
 
                     </Form.Control>
                 </Form>
-            </>
+            </div>
         )
     }
 }
